@@ -126,7 +126,8 @@ def encrypt_text():
     cipher_shift = cipher_shift_menu.get()
     cipher_shift = int(cipher_shift)
     string_encrypted = ""
-
+    
+    # Shifts the current letter according to curreny position and indicated cipher shift
     for character in string_to_encrypt:
         position = letters.find(character)
         new_position = position + cipher_shift
@@ -152,7 +153,8 @@ def decrypt_text():
     cipher_shift = cipher_shift_menu.get()
     cipher_shift = int(cipher_shift)
     string_encrypted = ""
-
+    
+    # Shifts the current letter according to curreny position and indicated cipher shift
     for character in string_to_decrypt:
         position = letters.find(character)
         new_position = position - (cipher_shift - cipher_shift)
@@ -165,6 +167,7 @@ def decrypt_text():
     Text2.delete("1.0","end-1c")
     Text2.insert("1.0", string_encrypted)
 
+# Function wouldn't work just saying the command is the function name, so a lambda with it would work
 TButton1 = ttk.Button(Canvas1)
 TButton1.place(relx=0.407, rely=0.774, height=24, width=87)
 TButton1.configure(takefocus="")
