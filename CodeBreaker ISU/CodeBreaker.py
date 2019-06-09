@@ -132,7 +132,11 @@ def encrypt_text():
         new_position = position + cipher_shift
 
         if character in letters:
-            string_encrypted = string_encrypted + letters[new_position]
+            if new_position >= 26:
+                new_position = new_position - 26
+                string_encrypted = string_encrypted + letters[new_position]
+            else:
+                string_encrypted = string_encrypted + letters[new_position]
         else:
             string_encrypted = string_encrypted + character
 
@@ -151,7 +155,7 @@ def decrypt_text():
 
     for character in string_to_decrypt:
         position = letters.find(character)
-        new_position = position - (cipher_shift - 1)
+        new_position = position - (cipher_shift - cipher_shift)
 
         if character in letters:
             string_encrypted = string_encrypted + letters[new_position]
@@ -174,4 +178,4 @@ TButton2.configure(takefocus="")
 TButton2.configure(text="Decrypt")
 TButton2.configure(command=lambda: decrypt_text())
 
-root.mainloop() # Basically like a forever lasting while loop until the windows is closed
+root.mainloop() # Basically like a forever lasting while loop until the window is closed
