@@ -35,7 +35,7 @@ spinstyle.theme_create("spinstyle", parent="alt",
                                     "background": "#484848",
                                     "foreground": "white"
                                 }}})
-combostyle.theme_use("combostyle")
+spinstyle.theme_use("combostyle")
 theme_img = tk.PhotoImage(file="Assets/theme.png")
 
 # Widget init (Many configure methods because PEP-8 doesn't like long lines)
