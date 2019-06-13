@@ -145,6 +145,7 @@ def encrypt_text():
     Text2.insert("1.0", string_encrypted)
 
 # Cipher func init
+# TODO: Check function since it only works if encryption is done first, and that is wrong
 def decrypt_text():
     """Decryption function"""
     string_to_decrypt = Text1.get("1.0","end-1c")
