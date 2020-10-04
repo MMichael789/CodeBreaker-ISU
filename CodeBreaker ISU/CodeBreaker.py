@@ -1,5 +1,7 @@
 # CodeBreaker.py
 
+# TODO: Add build-scripts to repo
+
 # Imports
 import Tkinter as tk
 import ttk
